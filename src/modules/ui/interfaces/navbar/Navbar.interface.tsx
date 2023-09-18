@@ -1,18 +1,32 @@
 "use client";
 
+import { Button, Dropdown, GitHub, INavItem, Link } from "@/ui";
 import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import { usePathname } from "next/navigation";
-
-import { ERoutes } from "@/models";
-import { Button, GitHub, Link } from "@/ui";
-import { useTheme } from "@/hooks";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { ERoutes } from "@/models";
+import { useTheme } from "@/hooks";
 
 const Navbar = () => {
   const pathname = usePathname();
   const { theme, handleTheme } = useTheme();
 
   const [mobile, setMobile] = useState(false);
+
+  const NAV_ITEMS: INavItem[] = [
+    {
+      name: "Inicio",
+      href: ERoutes.HOME,
+      isCurrent: pathname === ERoutes.HOME,
+    },
+    { name: "Blog", href: ERoutes.BLOG, isCurrent: pathname === ERoutes.BLOG },
+    {
+      target: "_blank",
+      name: "Source",
+      href: "https://github.com/Octaviocossy/portfolio_2023",
+      icon: <GitHub className="mr-1" />,
+    },
+  ];
 
   useEffect(() => {
     const handleMobile = () => {
@@ -34,26 +48,19 @@ const Navbar = () => {
         </h1>
         <nav className="hidden sm:block">
           <ul className="flex space-x-4">
-            <li>
-              <Link href={ERoutes.HOME} isCurrent={pathname === ERoutes.HOME}>
-                Inicio
-              </Link>
-            </li>
-            <li>
-              <Link href={ERoutes.BLOG} isCurrent={pathname === ERoutes.BLOG}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"https://github.com/Octaviocossy/portfolio_2023"}
-                target={"_blank"}
-                className="flex items-center"
-              >
-                <GitHub className="mr-1" />
-                Source
-              </Link>
-            </li>
+            {NAV_ITEMS.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  target={item.target}
+                  isCurrent={item.isCurrent}
+                  className="flex items-center"
+                >
+                  {item.icon}
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </section>
@@ -68,12 +75,11 @@ const Navbar = () => {
             <SunIcon className="w-4 h-4 text-white" />
           )}
         </Button>
-        <Button
-          onClick={() => console.log("testing")}
-          className="ml-4 block sm:hidden"
-        >
-          <Bars3Icon className="w-4 h-4 text-gray-800 dark:text-white" />
-        </Button>
+        <Dropdown
+          className="ml-2 block sm:hidden"
+          items={NAV_ITEMS}
+          icon={<Bars3Icon className="w-4 h-4 text-gray-800 dark:text-white" />}
+        />
       </section>
     </header>
   );
