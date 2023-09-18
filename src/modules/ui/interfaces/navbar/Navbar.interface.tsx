@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const { theme, handleTheme } = useTheme();
 
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState(!Boolean(window.innerWidth > 640));
 
   const NAV_ITEMS: INavItem[] = [
     {
