@@ -1,5 +1,9 @@
 import { Container } from "@/ui";
 
 export default function Blog() {
-  return <Container>Blog</Container>;
-};
+  return (
+    <Container>
+      <p>blog</p>
+    </Container>
+  );
+}

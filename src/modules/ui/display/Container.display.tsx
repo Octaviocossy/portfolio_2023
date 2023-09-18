@@ -4,5 +4,5 @@ interface IProps {
 }
 
 export const Container: React.FC<IProps> = ({ children, className }) => {
-  return <div className={`px-4 max-w-3xl m-auto ${className}`}>{children}</div>;
+  return <div className={`px-4 pt-20 max-w-2xl m-auto ${className}`}>{children}</div>;
 };
