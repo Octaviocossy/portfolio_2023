@@ -67,7 +67,7 @@ const Navbar = () => {
       <section className="flex">
         <Button
           onClick={handleTheme}
-          className="bg-gray-700 hover:bg-gray-800 dark:bg-yellow-500 dark:border-yellow-800 dark:hover:bg-yellow-600"
+          className="bg-gray-700 hover:bg-gray-800 dark:bg-yellow-500 dark:border-yellow-800 hover:dark:bg-yellow-600"
         >
           {theme === "light" ? (
             <MoonIcon className="w-4 h-4 text-white" />
