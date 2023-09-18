@@ -41,7 +41,10 @@ const Navbar = () => {
   });
 
   return (
-    <header className="px-4 max-w-2xl m-auto py-6 flex items-center space-x-4 absolute w-full left-0 right-0">
+    <header
+      className="px-4 max-w-2xl m-auto py-6 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
+      style={{ backdropFilter: "blur(10px)" }}
+    >
       <section className="flex items-center flex-1">
         <h1 className="font-bold text-xl flex-1">
           {mobile ? ".ovct" : "Octavio Cossy Torquati"}
