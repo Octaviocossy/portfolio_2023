@@ -19,7 +19,7 @@ const Navbar = () => {
       href: ERoutes.HOME,
       isCurrent: pathname === ERoutes.HOME,
     },
-    { name: "Blog", href: ERoutes.BLOG, isCurrent: pathname === ERoutes.BLOG },
+    { name: "Posts", href: ERoutes.POSTS, isCurrent: pathname === ERoutes.POSTS },
     {
       target: "_blank",
       name: "Source",
@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="px-4 max-w-2xl m-auto py-6 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
+      className="px-4 max-w-xl m-auto py-6 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <section className="flex items-center flex-1">
@@ -70,7 +70,7 @@ const Navbar = () => {
       <section className="flex">
         <Button
           onClick={handleTheme}
-          className="bg-gray-700 hover:bg-gray-800 dark:bg-yellow-500 dark:border-yellow-800 hover:dark:bg-yellow-600"
+          className="bg-gray-700 border-gray-600 hover:bg-gray-800 dark:bg-yellow-500 dark:border-yellow-400 hover:dark:bg-yellow-600"
         >
           {theme === "light" ? (
             <MoonIcon className="w-4 h-4 text-white" />
