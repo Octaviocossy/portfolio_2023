@@ -10,7 +10,7 @@ interface IProps {
   className?: string;
 }
 
-export const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
+const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
   return (
     <Menu as="div" className={`relative inline-block text-left ${className}`}>
       <div>
@@ -54,3 +54,5 @@ export const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
     </Menu>
   );
 };
+
+export default Dropdown;
