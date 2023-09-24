@@ -7,7 +7,7 @@ export const AboutMe = () => {
       <p>
         Di comienzo a mis estudios en el año 2020 de manera autodidacta. Luego
         de familiarizarme con el desarrollo web y haber adquirido un stack
-        básico, comencé en el 2021 la{" "}
+        básico, comencé en el 2021 una{" "}
         <span className="font-semibold">
           Tecnicatura Universitaria en Programación (UTN)
         </span>

@@ -18,7 +18,7 @@ export default function RootLayout({ children }: IProps) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} m-auto bg-[#f0e7db] text-gray-800 dark:bg-gray-900 dark:text-gray-200`}
+        className={`${inter.className} m-auto bg-white-custom text-gray-800 dark:bg-gray-900 dark:text-gray-200`}
       >
         <Navbar />
         {children}
