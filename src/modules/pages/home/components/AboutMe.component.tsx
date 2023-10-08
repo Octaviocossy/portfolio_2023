@@ -1,8 +1,8 @@
-import { Title } from "@/ui";
+import { Section, Title } from "@/ui";
 
 export const AboutMe = () => {
   return (
-    <section className="flex flex-col space-y-1">
+    <Section className="flex flex-col space-y-1">
       <Title>Sobre Mi</Title>
       <p>
         Di comienzo a mis estudios en el año 2020 de manera autodidacta. Luego
@@ -22,6 +22,6 @@ export const AboutMe = () => {
           que se adapte a las necesidades del cliente.
         </span>
       </p>
-    </section>
+    </Section>
   );
 };

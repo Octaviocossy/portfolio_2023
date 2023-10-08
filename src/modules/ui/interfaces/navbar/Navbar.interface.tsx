@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="px-4 max-w-xl m-auto py-6 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
+      className="px-4 max-w-xl m-auto py-8 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <section className="flex items-center flex-1">

@@ -1,4 +1,5 @@
 export enum ERoutes {
-    HOME = '/',
-    POSTS = '/posts',
+  HOME = "/",
+  POSTS = "/posts",
+  EXPERIENCE = "/experience",
 }
