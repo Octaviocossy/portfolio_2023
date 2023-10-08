@@ -2,6 +2,7 @@ import "../main.css";
 import { Navbar } from "@/ui";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "./theme_provider";
 
 interface IProps {
   children: React.ReactNode;
@@ -20,8 +21,10 @@ export default function RootLayout({ children }: IProps) {
       <body
         className={`${inter.className} m-auto bg-white-custom text-gray-800 dark:bg-gray-900 dark:text-gray-200`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

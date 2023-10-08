@@ -2,16 +2,13 @@
 
 import { Button, Dropdown, GitHub, INavItem, Link } from "@/ui";
 import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ERoutes } from "@/models";
-import { useTheme } from "@/hooks";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
   const pathname = usePathname();
-  const { theme, handleTheme } = useTheme();
-
-  const [mobile, setMobile] = useState(!Boolean(window.innerWidth > 640));
 
   const NAV_ITEMS: INavItem[] = [
     {
@@ -19,7 +16,11 @@ const Navbar = () => {
       href: ERoutes.HOME,
       isCurrent: pathname === ERoutes.HOME,
     },
-    { name: "Posts", href: ERoutes.POSTS, isCurrent: pathname === ERoutes.POSTS },
+    {
+      name: "Posts",
+      href: ERoutes.POSTS,
+      isCurrent: pathname === ERoutes.POSTS,
+    },
     {
       target: "_blank",
       name: "Source",
@@ -28,18 +29,6 @@ const Navbar = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleMobile = () => {
-      window.innerWidth > 640 ? setMobile(false) : setMobile(true);
-    };
-
-    window.addEventListener("resize", handleMobile);
-
-    return () => {
-      window.removeEventListener("resize", handleMobile);
-    };
-  });
-
   return (
     <header
       className="px-4 max-w-xl m-auto py-6 flex items-center space-x-4 fixed w-full top-0 left-0 right-0"
@@ -47,7 +36,8 @@ const Navbar = () => {
     >
       <section className="flex items-center flex-1">
         <h1 className="font-bold text-xl flex-1">
-          {mobile ? ".ovct" : "Octavio Cossy Torquati"}
+          <span className="block sm:hidden">.ovct</span>
+          <span className="hidden sm:block">Octavio Cossy Torquati</span>
         </h1>
         <nav className="hidden sm:block">
           <ul className="flex space-x-4">
@@ -69,7 +59,9 @@ const Navbar = () => {
       </section>
       <section className="flex">
         <Button
-          onClick={handleTheme}
+          onClick={() =>
+            theme === "dark" ? setTheme("light") : setTheme("dark")
+          }
           className="bg-gray-700 border-gray-600 hover:bg-gray-800 dark:bg-yellow-500 dark:border-yellow-400 hover:dark:bg-yellow-600"
         >
           {theme === "light" ? (
