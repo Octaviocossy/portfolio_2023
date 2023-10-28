@@ -5,7 +5,7 @@ interface IProps {
 
 export const Section: React.FC<IProps> = ({ children, className }) => {
   return (
-    <section className={`flex flex-col space-y-1 ${className}`}>
+    <section className={`flex flex-col space-y-3 ${className}`}>
       {children}
     </section>
   );

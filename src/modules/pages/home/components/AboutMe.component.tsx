@@ -2,7 +2,7 @@ import { Section, Title } from "@/ui";
 
 export const AboutMe = () => {
   return (
-    <Section className="flex flex-col space-y-1">
+    <Section>
       <Title>Sobre Mi</Title>
       <p>
         Di comienzo a mis estudios en el año 2020 de manera autodidacta. Luego
