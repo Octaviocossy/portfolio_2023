@@ -7,6 +7,9 @@ export default function Home() {
       <Presentation />
       <AboutMe />
       <Experience />
+      {/* technologies */}
+      {/* projects / freelance */}
+      {/* lastest posts */}
     </Container>
   );
 }

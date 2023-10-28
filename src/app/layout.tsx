@@ -24,6 +24,7 @@ export default function RootLayout({ children }: IProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
+          {/* footer (social) */}
         </ThemeProvider>
       </body>
     </html>

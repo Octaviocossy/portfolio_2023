@@ -1,5 +1,4 @@
-import { ERoutes, IExperience } from "@/models";
-import Link from "next/link";
+import { IExperience } from "@/models";
 
 interface IProps {
   data: IExperience;
@@ -13,13 +12,11 @@ const Item: React.FC<IProps> = ({ data }) => {
         {" - "}
         <span>{data.to}</span>
         {" -> "}
-        <Link
-          href={`${ERoutes.EXPERIENCE}/${data.slug}`}
-          className={"underline font-bold"}
-        >
+        <a href={data.url} target="_blank" className={"font-bold underline"}>
           {data.company}
-        </Link>
+        </a>
       </p>
+      <p className="ml-3 text-[0.9rem] font-semibold">{data.description}</p>
     </div>
   );
 };

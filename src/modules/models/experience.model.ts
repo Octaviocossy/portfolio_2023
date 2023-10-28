@@ -3,6 +3,6 @@ export interface IExperience {
   from: string;
   to: string;
   company: string;
-  slug: string;
   description: string;
+  url: string;
 }
