@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Presentation = () => {
   return (
-    <section className="flex items-center flex-col-reverse sm:flex-row pt-3">
+    <section className="flex items-center flex-col-reverse sm:flex-row">
       <div className="flex-1 flex space-y-2 flex-col pr-[11px]">
         <h1 className="font-bold text-3xl sm:text-4xl">Fullstack Developer</h1>
         <p>

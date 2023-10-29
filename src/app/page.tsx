@@ -1,14 +1,14 @@
+import * as Components from "@/pages/home/components";
 import { Container } from "@/ui";
-import { AboutMe, Experience, Presentation, Skills } from "@/pages/home";
 
 export default function Home() {
   return (
-    <Container>
-      <Presentation />
-      <AboutMe />
-      <Experience />
-      <Skills />
-      {/* projects / freelance */}
+    <Container className="pt-[7rem]">
+      <Components.Presentation />
+      <Components.AboutMe />
+      <Components.Experience />
+      <Components.Skills />
+      <Components.Projects />
       {/* lastest posts */}
     </Container>
   );
