@@ -1,37 +1,16 @@
 import { Section, Title } from "@/ui";
 import { Tag } from "../ui";
+import { SKILLS_API } from "@/mocks";
 
-export const Skills = () => {
-  const skills_list: string[] = [
-    "React",
-    "NodeJS",
-    "TypeScript",
-    "NextJS",
-    "Redux",
-    "React Native",
-    "ElectronJS",
-    "ExpressJS",
-    "Prisma",
-    "PostgreSQL",
-    "Docker",
-    "Git",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Sass",
-    "TailwindCSS",
-    "Chakra-UI",
-    "SQL Server",
-    "Angular",
-    ".NET 6",
-  ];
+export const Skills = async () => {
+  const skills_list = await SKILLS_API.get();
 
   return (
     <Section>
       <Title>Skills</Title>
       <div className="flex flex-wrap">
-        {skills_list.map((technologie, i) => (
-          <Tag key={i} name={technologie} />
+        {skills_list.map((skill, i) => (
+          <Tag key={i} text={skill.name} color={skill.color} />
         ))}
       </div>
     </Section>
