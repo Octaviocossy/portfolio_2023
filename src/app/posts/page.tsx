@@ -2,8 +2,8 @@ import { Container } from "@/ui";
 
 export default function Blog() {
   return (
-    <Container>
-      <p>posts</p>
+    <Container className="space-y-4">
+      <p>All posts!</p>
     </Container>
   );
 }
