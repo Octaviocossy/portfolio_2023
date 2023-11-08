@@ -10,7 +10,11 @@ export const Skills = async () => {
       <Title>Skills</Title>
       <div className="flex flex-wrap">
         {skills_list.map((skill, i) => (
-          <Tag key={i} text={skill.name} color={skill.color} />
+          <Tag
+            key={i}
+            text={skill.name}
+            className={`${skill.color} shadow-lg border-2`}
+          />
         ))}
       </div>
     </Section>

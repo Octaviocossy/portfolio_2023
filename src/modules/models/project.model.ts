@@ -4,4 +4,5 @@ export interface IProject {
   slug: string;
   is_in_development: boolean;
   coverImage: string;
+  tags: string[]
 }

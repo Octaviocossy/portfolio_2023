@@ -1,11 +1,11 @@
 interface IProps {
   text: string;
-  color: string;
+  className: string;
 }
 
-const Tag: React.FC<IProps> = ({ text, color }) => {
+const Tag: React.FC<IProps> = ({ text, className }) => {
   return (
-    <div className={`${color} px-2 py-1 rounded-lg mb-3 mr-3 text-sm`}>
+    <div className={`${className} px-2 py-1 rounded-lg mb-3 mr-3 text-sm`}>
       <p>{text}</p>
     </div>
   );
