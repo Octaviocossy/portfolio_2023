@@ -4,8 +4,8 @@ import matter from "gray-matter";
 type TMDX_TYPE = "project" | "post";
 
 export const LOCAL_MDX_PATH: { [key: string]: string } = {
-  project: "src/modules/pages/home/projects",
-  post: "src/modules/pages/blog/posts",
+  project: "src/modules/screens/home/projects",
+  post: "src/modules/screens/blog/posts",
 };
 
 export const verify_slug = async (

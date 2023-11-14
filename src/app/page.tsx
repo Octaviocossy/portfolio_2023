@@ -1,4 +1,4 @@
-import * as Components from "@/pages/home/components";
+import * as Components from "@/screens/home/components";
 import { Container } from "@/ui";
 
 export default function Home() {
