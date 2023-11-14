@@ -3,6 +3,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { INavItem, Link } from "@/ui";
+import { cn } from "@/utilities/tailwind_merge.utility";
 
 interface IProps {
   icon: React.ReactNode;
@@ -12,7 +13,7 @@ interface IProps {
 
 const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
   return (
-    <Menu as="div" className={`relative inline-block text-left ${className}`}>
+    <Menu as="div" className={cn("relative inline-block text-left", className)}>
       <div>
         <Menu.Button
           className={`border dark:border-gray-800 shadow-sm p-2 rounded-lg 

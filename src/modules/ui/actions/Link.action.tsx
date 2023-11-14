@@ -1,3 +1,4 @@
+import { cn } from "@/utilities/tailwind_merge.utility";
 import NextLink, { LinkProps } from "next/link";
 
 interface IProps extends LinkProps {
@@ -13,7 +14,7 @@ const Link: React.FC<IProps> = (props) => {
   return (
     <NextLink
       {...rest}
-      className={`font-semibold ${isCurrent && "underline"} ${className}`}
+      className={cn("font-semibold", { underline: isCurrent }, className)}
     >
       {children}
     </NextLink>

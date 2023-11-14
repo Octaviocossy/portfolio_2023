@@ -31,7 +31,7 @@ export const get_all_metas = async <T>(mdx_type: TMDX_TYPE): Promise<T[]> => {
       const { data } = matter(mdxSource);
 
       return data as T;
-    }),
+    })
   );
 
   return metas;

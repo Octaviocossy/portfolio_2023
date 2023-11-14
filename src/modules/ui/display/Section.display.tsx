@@ -1,3 +1,5 @@
+import { cn } from "@/utilities/tailwind_merge.utility";
+
 interface IProps {
   children: React.ReactNode;
   className?: string;
@@ -5,7 +7,7 @@ interface IProps {
 
 export const Section: React.FC<IProps> = ({ children, className }) => {
   return (
-    <section className={`flex flex-col space-y-3 ${className}`}>
+    <section className={cn("flex flex-col space-y-3", className)}>
       {children}
     </section>
   );
