@@ -1,14 +1,14 @@
 import { cn } from "@/utilities/tailwind_merge.utility";
 
 interface IProps {
-  text: string;
   className?: string;
+  children?: React.ReactNode;
 }
 
-const Tag: React.FC<IProps> = ({ text, className }) => {
+const Tag: React.FC<IProps> = ({ className, children }) => {
   return (
     <div className={cn("px-2 py-1 rounded-lg mb-3 mr-3 text-sm", className)}>
-      <p>{text}</p>
+      {children}     
     </div>
   );
 };

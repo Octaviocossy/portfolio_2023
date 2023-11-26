@@ -10,7 +10,7 @@ export const LOCAL_MDX_PATH: { [key: string]: string } = {
 
 export const verify_slug = async (
   slug: string,
-  mdx_type: TMDX_TYPE,
+  mdx_type: TMDX_TYPE
 ): Promise<Boolean> => {
   return await fs
     .readdir(LOCAL_MDX_PATH[mdx_type])
