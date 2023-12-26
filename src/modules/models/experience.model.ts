@@ -1,3 +1,8 @@
+interface IProject {
+  title: string;
+  technologies: string[];
+}
+
 export interface IExperience {
   id: number;
   from: string;
@@ -5,4 +10,5 @@ export interface IExperience {
   company: string;
   description: string;
   url: string;
+  projects: IProject[];
 }

@@ -1,10 +1,16 @@
 "use client";
 
 import { Button, Dropdown, GitHub, INavItem, Link } from "@/ui";
-import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import {
+  Bars3Icon,
+  MoonIcon,
+  SunIcon,
+  UserIcon,
+} from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
 import { ERoutes } from "@/models";
 import { useTheme } from "next-themes";
+import { cn } from "@/utilities/tailwind_merge.utility";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -20,6 +26,7 @@ const Navbar = () => {
       name: "Posts",
       href: ERoutes.POSTS,
       isCurrent: pathname === ERoutes.POSTS,
+      disabled: true,
     },
     {
       target: "_blank",
@@ -47,7 +54,9 @@ const Navbar = () => {
                   href={item.href}
                   target={item.target}
                   isCurrent={item.isCurrent}
-                  className="flex items-center"
+                  className={cn("flex items-center", {
+                    "pointer-events-none text-gray-500": item.disabled,
+                  })}
                 >
                   {item.icon}
                   {item.name}
@@ -57,7 +66,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </section>
-      <section className="flex">
+      <section className="flex space-x-2">
         <Button
           onClick={() =>
             theme === "dark" ? setTheme("light") : setTheme("dark")

@@ -1,8 +1,8 @@
-import { Container } from "@/ui";
-import { readFile } from "fs/promises";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { LOCAL_MDX_PATH, verify_slug } from "@/utilities";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { redirect } from "next/navigation";
+import { readFile } from "fs/promises";
+import { Container } from "@/ui";
 import matter from "gray-matter";
 
 interface IProps {

@@ -1,5 +1,9 @@
 import { IExperience } from "@/models";
 
+interface IProject {
+  title: string;
+}
+
 const experience: IExperience[] = [
   {
     id: 2,
@@ -8,6 +12,24 @@ const experience: IExperience[] = [
     company: "Janus Automation",
     description: "Fullstack Developer - React & NodeJS",
     url: "https://www.janusautomation.com/website/",
+    projects: [
+      {
+        title: "Tracking de técnicos y ordenes.",
+        technologies: ["React", "Chakra UI", "Python", "SQL Server"],
+      },
+      {
+        title: "Tracking de técnicos y ordenes. (Migración a React Native)",
+        technologies: ["React Native", "Native Base"],
+      },
+      {
+        title: "Weighing scale (balanza) - (Mantenimiento)",
+        technologies: ["React", "NodeJS", "SQL Server"],
+      },
+      {
+        title: "Dashboard de eventos y configuración de equipos Doven.",
+        technologies: ["React", ".NET CORE", "SQL Server"],
+      },
+    ],
   },
   {
     id: 1,
@@ -16,6 +38,12 @@ const experience: IExperience[] = [
     company: "Gestioner Soft",
     description: "React Developer",
     url: "https://gestionersoft.com/",
+    projects: [
+      {
+        title: "Gestor de Licencias. (Web App interna)",
+        technologies: ["React", "TailwindCSS"],
+      },
+    ],
   },
 ];
 

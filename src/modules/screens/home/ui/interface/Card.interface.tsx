@@ -32,7 +32,6 @@ const Card: React.FC<IProps> = ({ data }) => {
           </Tag>
         ))}
       </div>
-
       <div className="flex flex-wrap">
         {data.tags.map((tag) => (
           <Tag

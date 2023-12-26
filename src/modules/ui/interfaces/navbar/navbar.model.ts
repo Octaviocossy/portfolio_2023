@@ -4,4 +4,5 @@ export interface INavItem {
   isCurrent?: boolean;
   icon?: React.ReactNode;
   target?: string;
+  disabled?: boolean;
 }
