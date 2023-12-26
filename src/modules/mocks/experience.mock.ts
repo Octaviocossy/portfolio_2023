@@ -10,7 +10,7 @@ const experience: IExperience[] = [
     from: "dic. 2022",
     to: "Actualidad",
     company: "Janus Automation",
-    description: "Fullstack Developer - React & NodeJS",
+    description: "Fullstack Developer",
     url: "https://www.janusautomation.com/website/",
     projects: [
       {
