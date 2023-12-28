@@ -43,8 +43,7 @@ export const Presentation = () => {
             GitHub
           </Link>
           <Link
-            href={process.env.CV_URL || ''}
-            download={"CV Octavio Cossy Torquati - FullStack Developer"}
+            href={'https://drive.google.com/file/d/1cRwc9HxzYJPiDLpLME3IZ731jkt_OFZ6/view?usp=sharing'}
             className="flex items-center font-semibold"
           >
             <ArrowDownTrayIcon className="h-4 w-4 mr-1" />
