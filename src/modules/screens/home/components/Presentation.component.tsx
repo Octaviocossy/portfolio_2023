@@ -1,5 +1,8 @@
 import { Prof_Picture } from "@/assets";
+import { Button, GitHub, Linkedin } from "@/ui";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Presentation = () => {
   return (
@@ -22,6 +25,32 @@ export const Presentation = () => {
           </span>
           🎹.
         </p>
+        <div className="flex space-x-4">
+          <Link
+            href={"https://www.linkedin.com/in/octaviocossy"}
+            className="flex items-center font-semibold"
+            target="_blank"
+          >
+            <Linkedin className="mr-1" />
+            LinkedIn
+          </Link>
+          <Link
+            href={"https://github.com/Octaviocossy"}
+            className="flex items-center font-semibold"
+            target="_blank"
+          >
+            <GitHub className="mr-1" />
+            GitHub
+          </Link>
+          <Link
+            href={process.env.CV_URL || ''}
+            download={"CV Octavio Cossy Torquati - FullStack Developer"}
+            className="flex items-center font-semibold"
+          >
+            <ArrowDownTrayIcon className="h-4 w-4 mr-1" />
+            CV
+          </Link>
+        </div>
       </div>
       <Image
         src={Prof_Picture}

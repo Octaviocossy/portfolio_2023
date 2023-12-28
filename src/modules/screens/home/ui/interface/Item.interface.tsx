@@ -19,7 +19,6 @@ const Item: React.FC<IProps> = ({ data }) => {
       <p className="ml-3 text-[0.9rem] font-semibold">{data.description}.</p>
       <ul className="ml-9 list-disc">
         {data.projects.map((project) => (
-          <>
             <li key={project.title} className="text-[0.9rem]">
               <p className="font-semibold">{project.title}</p>
               <div className="ml-3">
@@ -31,7 +30,6 @@ const Item: React.FC<IProps> = ({ data }) => {
                 ))}
               </div>
             </li>
-          </>
         ))}
       </ul>
     </div>
