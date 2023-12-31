@@ -9,4 +9,5 @@ export interface IProject {
   skills: ISkill[]
   deploy?: string
   repo?: string
+  miniature: string
 }

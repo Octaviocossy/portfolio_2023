@@ -7,12 +7,12 @@ interface IProps {
 const Item: React.FC<IProps> = ({ data }) => {
   return (
     <div>
-      <p>
+      <p className="font-bold">
         <span>{data.from}</span>
         {" - "}
         <span>{data.to}</span>
         {" -> "}
-        <a href={data.url} target="_blank" className={"font-bold underline"}>
+        <a href={data.url} target="_blank" className={"font-semibold underline"}>
           {data.company}
         </a>
       </p>

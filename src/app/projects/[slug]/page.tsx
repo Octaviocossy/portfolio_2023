@@ -26,7 +26,7 @@ export default async function Project({ params: { slug } }: IProps) {
   if(!data) return redirect("/");
 
   return (
-    <Container className="space-y-4">
+    <Container className="space-y-4 mt-1">
       <MDXRemote
         source={content}
         components={{ ...Components, ...(Components(data) || {}) }}

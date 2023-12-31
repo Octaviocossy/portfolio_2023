@@ -1,5 +1,4 @@
-import { Prof_Picture } from "@/assets";
-import { Button, GitHub, Linkedin } from "@/ui";
+import {  GitHub, Linkedin } from "@/ui";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,7 +51,9 @@ export const Presentation = () => {
         </div>
       </div>
       <Image
-        src={Prof_Picture}
+        src={'/ovct.webp'}
+        width={650}
+        height={664}
         alt="Picture of the author"
         className="rounded-full w-[192px] mb-8 sm:mb-0 sm:w-36"
       />

@@ -9,7 +9,7 @@ export const Projects = async () => {
   return (
     <Section>
       <Title>Proyectos</Title>
-      <div className="grid md:grid-cols-1 gap-2">
+      <div className="grid md:grid-cols-2 gap-2">
         {metas.map((meta) => (
           <Card key={meta.slug} data={meta} />
         ))}

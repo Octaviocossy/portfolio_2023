@@ -1,9 +1,5 @@
 import { IExperience } from "@/models";
 
-interface IProject {
-  title: string;
-}
-
 const experience: IExperience[] = [
   {
     id: 2,
@@ -15,11 +11,11 @@ const experience: IExperience[] = [
     projects: [
       {
         title: "Tracking de técnicos y ordenes.",
-        technologies: ["React", "Chakra UI", "Python", "SQL Server"],
+        technologies: ["React", "TypeScript", "Chakra UI", "Python", "SQL Server"],
       },
       {
         title: "Tracking de técnicos y ordenes. (Migración a React Native)",
-        technologies: ["React Native", "Native Base"],
+        technologies: ["React Native", "TypeScript", "Native Base"],
       },
       {
         title: "Weighing scale (balanza) - (Mantenimiento)",
@@ -27,7 +23,7 @@ const experience: IExperience[] = [
       },
       {
         title: "Dashboard de eventos y configuración de equipos Doven.",
-        technologies: ["React", ".NET CORE", "SQL Server"],
+        technologies: ["React", "TypeScript", ".NET CORE", "SQL Server"],
       },
     ],
   },
@@ -40,7 +36,7 @@ const experience: IExperience[] = [
     url: "https://gestionersoft.com/",
     projects: [
       {
-        title: "Gestor de Licencias. (Web App interna)",
+        title: "Gestor de Facturas Electrónicas. (Web App interna)",
         technologies: ["React", "TailwindCSS"],
       },
     ],
