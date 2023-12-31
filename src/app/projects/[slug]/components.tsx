@@ -1,8 +1,5 @@
 import { IProject } from "@/models";
-import { LinkIcon, Vercel } from "@/ui";
-import { Tag } from "@/screens/home/ui";
-import { cn } from "@/utilities/tailwind_merge.utility";
-import Image from "next/image";
+import { LinkIcon } from "@/ui";
 import Link from "next/link";
 
 export const Components = (props: IProject) => ({
