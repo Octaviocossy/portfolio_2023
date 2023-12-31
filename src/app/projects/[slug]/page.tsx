@@ -1,11 +1,12 @@
 import { LOCAL_MDX_PATH, get_all_metas, verify_slug } from "@/utilities";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { redirect } from "next/navigation";
-import { Components } from "./components";
-import { readFile } from "fs/promises";
-import { Container } from "@/ui";
-import matter from "gray-matter";
 import { projectAdapter } from "@/adapters";
+import { Components } from "./components";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { Container } from "@/ui";
+import { redirect } from "next/navigation";
+import { readFile } from "fs/promises";
+import matter from "gray-matter";
+import path from "path";
 
 interface IProps {
   params: { slug: string };
@@ -15,7 +16,7 @@ export default async function Project({ params: { slug } }: IProps) {
   // Redirect to home page if slug is not valid
   if (!(await verify_slug(slug, "project"))) return redirect("/");
 
-  const file = await readFile(`${LOCAL_MDX_PATH["project"]}/${slug}.mdx`, "utf-8");
+  const file = await readFile(path.resolve(LOCAL_MDX_PATH["project"], `${slug}.mdx`), "utf-8");
 
   const { content } = matter(file);
 

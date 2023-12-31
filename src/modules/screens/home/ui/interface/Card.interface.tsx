@@ -13,7 +13,7 @@ interface IProps {
 const Card: React.FC<IProps> = ({ data }) => {
   return (
     <Link
-      className="border-[#f3e0c8] hover:bg-[#f5e6d3] hover:border-[#f0d8ba] border-2 dark:border-gray-800 dark:hover:bg-gray-800 dark:hover:border-gray-700 p-3 rounded-lg cursor-pointer transition-colors space-y-2"
+      className="border-yellow-100/50 bg-yellow-100/10 hover:border-yellow-100/40 hover:bg-yellow-100/30 border-2 dark:bg-gray-900 dark:border-gray-800 dark:hover:bg-gray-800 dark:hover:border-gray-700 p-3 rounded-lg cursor-pointer transition-colors space-y-2"
       href={`/projects/${data.slug}`}
     >
       <h1 className="text-lg font-semibold">{data.title}</h1>

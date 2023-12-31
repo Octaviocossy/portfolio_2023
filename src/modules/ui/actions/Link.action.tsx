@@ -9,15 +9,13 @@ interface IProps extends LinkProps {
 }
 
 const Link: React.FC<IProps> = (props) => {
-  const { children, isCurrent, className, ...rest } = props;
+  const { isCurrent, className, ...rest } = props;
 
   return (
     <NextLink
       {...rest}
       className={cn("font-semibold", { underline: isCurrent }, className)}
-    >
-      {children}
-    </NextLink>
+    />
   );
 };
 

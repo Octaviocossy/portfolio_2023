@@ -1,12 +1,7 @@
 "use client";
 
 import { Button, Dropdown, GitHub, INavItem, Link } from "@/ui";
-import {
-  Bars3Icon,
-  MoonIcon,
-  SunIcon,
-  UserIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
 import { ERoutes } from "@/models";
 import { useTheme } from "next-themes";

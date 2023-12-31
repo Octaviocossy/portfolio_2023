@@ -6,7 +6,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-const Button: React.FC<IProps> = ({ children, className, ...props }) => {
+const Button: React.FC<IProps> = ({ className, ...props }) => {
   return (
     <button
       className={cn(
@@ -14,9 +14,7 @@ const Button: React.FC<IProps> = ({ children, className, ...props }) => {
         className
       )}
       {...props}
-    >
-      {children}
-    </button>
+    />
   );
 };
 

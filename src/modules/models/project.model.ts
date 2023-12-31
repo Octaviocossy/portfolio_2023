@@ -7,4 +7,6 @@ export interface IProject {
   is_in_development: boolean;
   tags: string[]
   skills: ISkill[]
+  deploy?: string
+  repo?: string
 }

@@ -8,7 +8,7 @@ export default function Home() {
       <Components.AboutMe />
       <Components.Experience />
       <Components.Skills />
-      {/* <Components.Projects /> */}
+      <Components.Projects />
       {/* lastest posts */}
     </Container>
   );

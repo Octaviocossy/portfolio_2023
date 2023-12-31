@@ -16,8 +16,8 @@ const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
     <Menu as="div" className={cn("relative inline-block text-left", className)}>
       <div>
         <Menu.Button
-          className={`border dark:border-gray-800 shadow-sm p-2 rounded-lg 
-          hover:bg-white-hover-custom border-white-border-custom hover:dark:bg-gray-800 transition-colors`}
+          className={`border bg-yellow-200/20 dark:bg-gray-900 dark:border-gray-800 shadow-sm p-2 rounded-lg 
+          hover:bg-yellow-100/50 border-white-border-custom hover:dark:bg-gray-800 transition-colors`}
         >
           {icon}
         </Menu.Button>
