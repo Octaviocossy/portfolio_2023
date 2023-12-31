@@ -40,7 +40,9 @@ const Dropdown: React.FC<IProps> = ({ icon, items, className }) => {
                     onClick={close}
                     href={item.href}
                     target={item.target}
-                    className={`flex items-center p-2 px-3`}
+                    className={cn("flex items-center  p-2 px-3", {
+                      "pointer-events-none text-gray-500": item.disabled,
+                    })}
                     isCurrent={item.isCurrent}
                   >
                     {item.icon}
