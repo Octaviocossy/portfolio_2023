@@ -1,5 +1,5 @@
 import { IProject } from "@/models";
-import { Vercel } from "@/ui";
+import { LinkIcon, Vercel } from "@/ui";
 import { Tag } from "@/screens/home/ui";
 import { cn } from "@/utilities/tailwind_merge.utility";
 import Image from "next/image";
@@ -16,47 +16,58 @@ export const Components = (props: IProject) => ({
       {props.children}
     </h2>
   ),
-  Tags: () => (
-    <div className="flex flex-wrap">
-      {props.tags.map((tag) => (
-        <Tag
-          key={tag}
-          className="border-[#f0d8ba] bg-[#f5e7d6] dark:bg-gray-500/10 border-2 dark:border-gray-500/10 mb-[0] text-[0.8rem] font-semibold"
+  Info: () => (
+    <div className="flex flex-col space-y-2">
+      <div className="text-sm flex items-center space-x-2">
+        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+          PLATAFORMA
+        </p>
+        <div className="flex flex-row space-x-1">
+          {props.platforms.map((platform, i) => (
+            <p key={platform}>
+              {platform}
+              {i !== props.platforms.length - 1 && ","}
+            </p>
+          ))}
+        </div>
+      </div>
+      <div className="text-sm flex items-center space-x-2">
+        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+          WEBSITE
+        </p>
+        <Link
+          href={props.deploy || ""}
+          className="hover:underline flex items-center"
         >
-          {tag}
-        </Tag>
-      ))}
-    </div>
-  ),
-  Skills: () => (
-    <div className="flex flex-wrap">
-      {props.skills.map((skill) => (
-        <Tag
-          key={skill.id}
-          className={cn(
-            "mb-[0] shadow-lg border-2 flex items-center",
-            skill.color
-          )}
-        >
-          <Image
-            width={15}
-            height={15}
-            src={skill.icon}
-            alt={`${skill.name} icon`}
-          />
-        </Tag>
-      ))}
-    </div>
-  ),
-  Deploy: () => (
-    <div>
-      <Link
-        href={props.deploy || ""}
-        target="_blank"
-        className="border-[#f0d8ba] bg-yellow-200/10 hover:bg-yellow-100/50 transition-colors hover:dark:bg-gray-500/20 dark:bg-gray-500/10 border-2 dark:border-gray-500/10 mb-[0] text-[0.8rem] font-semibold flex items-center w-fit p-2 rounded-lg dark:shadow-slate-500/20 shadow-yellow-200/20 shadow-md"
-      >
-        <Vercel className="mr-2" /> Deploy
-      </Link>
+          {props.deploy} <LinkIcon className="ml-1" />
+        </Link>
+      </div>
+      <div className="text-sm flex items-center space-x-2">
+        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+          STACK
+        </p>
+        <div className="flex flex-row space-x-1">
+          {props.skills.map((skill, i) => (
+            <p key={skill.id}>
+              {skill.name}
+              {i !== props.skills.length - 1 && ","}
+            </p>
+          ))}
+        </div>
+      </div>
+      <div className="text-sm flex items-center space-x-2">
+        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+          TIPO
+        </p>
+        <div className="flex flex-row space-x-1">
+          {props.tags.map((tag, i) => (
+            <p key={tag}>
+              {tag}
+              {i !== props.tags.length - 1 && ","}
+            </p>
+          ))}
+        </div>
+      </div>
     </div>
   ),
 });

@@ -38,8 +38,8 @@ const Navbar = () => {
     >
       <section className="flex items-center flex-1">
         <h1 className="font-bold text-xl flex-1">
-          <span className="block sm:hidden">.ovct</span>
-          <span className="hidden sm:block">Octavio Cossy Torquati</span>
+          <Link href={ERoutes.HOME} className="block sm:hidden w-fit">.ovct</Link>
+          <Link href={ERoutes.HOME} className="hidden sm:block w-fit">Octavio Cossy Torquati</Link>
         </h1>
         <nav className="hidden sm:block">
           <ul className="flex space-x-4">
