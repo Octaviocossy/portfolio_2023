@@ -39,7 +39,9 @@ export const Components = (props: IProject) => ({
           href={props.deploy || ""}
           className="hover:underline flex items-center"
         >
-          {props.deploy} <LinkIcon className="ml-1" />
+          <span>
+            {props.deploy} <LinkIcon className="ml-1 inline" />
+          </span>
         </Link>
       </div>
       <div className="text-sm flex items-center space-x-2">
