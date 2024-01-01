@@ -23,7 +23,7 @@ export default async function Project({ params: { slug } }: IProps) {
   const data = (await projectAdapter(await get_all_metas("project"))).find(data => data.slug === slug);
 
   // if data is undefined, redirect to home page
-  if(!data) return redirect("/");
+  if (!data) return redirect("/");
 
   return (
     <Container className="space-y-4 mt-1">

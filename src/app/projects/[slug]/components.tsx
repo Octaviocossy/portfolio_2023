@@ -34,6 +34,7 @@ export const Components = (props: IProject) => ({
         </p>
         <Link
           href={props.deploy || ""}
+          target="_blank"
           className="hover:underline flex items-center"
         >
           <span>

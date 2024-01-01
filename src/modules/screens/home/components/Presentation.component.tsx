@@ -43,6 +43,7 @@ export const Presentation = () => {
           </Link>
           <Link
             href={'https://drive.google.com/file/d/1cRwc9HxzYJPiDLpLME3IZ731jkt_OFZ6/view?usp=sharing'}
+            target="_blank"
             className="flex items-center font-semibold"
           >
             <ArrowDownTrayIcon className="h-4 w-4 mr-1" />
