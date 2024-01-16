@@ -11,18 +11,25 @@ const experience: IExperience[] = [
     projects: [
       {
         title: "Tracking de técnicos y ordenes.",
-        technologies: ["React", "TypeScript", "Chakra UI", "Python", "SQL Server"],
+        technologies: [
+          "React",
+          "TypeScript",
+          "Chakra UI",
+          "Python",
+          "SQL Server",
+        ],
       },
       {
         title: "Tracking de técnicos y ordenes. (Migración a React Native)",
         technologies: ["React Native", "TypeScript", "Native Base"],
       },
       {
-        title: "Weighing scale (balanza) - (Mantenimiento)",
-        technologies: ["React", "NodeJS", "SQL Server"],
+        title:
+          "Sistema monitoreo de perdida de peso en báscula - (Mantenimiento)",
+        technologies: ["React", "ElectronJS", "NodeJS", "SQL Server"],
       },
       {
-        title: "Dashboard de eventos y configuración de equipos Doven.",
+        title: "Dashboard de eventos y configuración de equipos internos.",
         technologies: ["React", "TypeScript", ".NET CORE", "SQL Server"],
       },
     ],
