@@ -42,7 +42,7 @@ export const Presentation = () => {
             GitHub
           </Link>
           <Link
-            href={'https://drive.google.com/file/d/1lqORaDNPFmyhZy9CBUb_zPKD8nGZOE_5/view?usp=sharing'}
+            href={process.env.CV_URL ?? 'https://drive.google.com/drive/folders/19TW5iGQC_jreNPttvSWto4g-U8p-Udk4?usp=sharing'}
             target="_blank"
             className="flex items-center font-semibold"
           >
