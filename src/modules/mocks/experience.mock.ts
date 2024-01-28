@@ -20,17 +20,21 @@ const experience: IExperience[] = [
         ],
       },
       {
-        title: "Tracking de técnicos y ordenes. (Migración a React Native)",
+        title: "Tracking de técnicos y ordenes. (Migración a React Native).",
         technologies: ["React Native", "TypeScript", "Native Base"],
       },
       {
         title:
-          "Sistema monitoreo de perdida de peso en báscula - (Mantenimiento)",
+          "Sistema monitoreo de perdida de peso en báscula - (Mantenimiento).",
         technologies: ["React", "ElectronJS", "NodeJS", "SQL Server"],
       },
       {
-        title: "Dashboard de eventos y configuración de equipos internos.",
+        title: "Dashboard de eventos y configuración de equipos Doven.",
         technologies: ["React", "TypeScript", ".NET CORE", "SQL Server"],
+      },
+      {
+        title: "Rodeo Crane Reporting System.",
+        technologies: ["Angular", "TypeScript", ".NET CORE", "SQL Server"],
       },
     ],
   },
