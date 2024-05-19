@@ -123,7 +123,7 @@ const skills: ISkill[] = [
   },
   {
     id: 21,
-    name: ".NET 6",
+    name: ".NET 8",
     icon: "/skills/dotnet-logo.png",
     color: "bg-purple-500/20 shadow-purple-500/10 border-purple-500/10",
   },

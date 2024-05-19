@@ -1,4 +1,4 @@
-import { IProject } from "@/models";
+import { EStatus, IProject } from "@/models";
 import { LinkIcon } from "@/ui";
 import Link from "next/link";
 
@@ -28,20 +28,22 @@ export const Components = (props: IProject) => ({
           ))}
         </div>
       </div>
-      <div className="text-sm flex items-center space-x-2">
-        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
-          WEBSITE
-        </p>
-        <Link
-          href={props.deploy || ""}
-          target="_blank"
-          className="hover:underline flex items-center"
-        >
-          <span>
-            {props.deploy} <LinkIcon className="ml-1 inline" />
-          </span>
-        </Link>
-      </div>
+      {props.deploy !== "-" && (
+        <div className="text-sm flex items-center space-x-2">
+          <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+            WEBSITE
+          </p>
+          <Link
+            href={props.deploy || ""}
+            target="_blank"
+            className="hover:underline flex items-center"
+          >
+            <span>
+              {props.deploy} <LinkIcon className="ml-1 inline" />
+            </span>
+          </Link>
+        </div>
+      )}
       <div className="text-sm flex items-center space-x-2">
         <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
           STACK
@@ -64,6 +66,18 @@ export const Components = (props: IProject) => ({
             <p key={tag}>
               {tag}
               {i !== props.tags.length - 1 && ","}
+            </p>
+          ))}
+        </div>
+      </div>
+      <div className="text-sm flex items-center space-x-2">
+        <p className="font-semibold p-1 text-yellow-800 dark:text-yellow-200 bg-yellow-400/20 rounded-md">
+          ESTADO
+        </p>
+        <div className="flex flex-row space-x-1">
+          {props.platforms.map((platform) => (
+            <p key={platform}>
+              {EStatus[props.status as unknown as keyof typeof EStatus]}
             </p>
           ))}
         </div>

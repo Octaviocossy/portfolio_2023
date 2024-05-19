@@ -12,7 +12,7 @@ export const Presentation = () => {
           Hola 👋 me llamo Octavio, <span className="font-semibold">ovct</span>{" "}
           para los amigos. Soy programador{" "}
           <span className="decoration-yellow-400 underline dark:decoration-yellow-600">
-            Fullstack {process.env.SENIORITY} especializado en React y NodeJS
+            {process.env.SENIORITY} Fullstack especializado en React y NodeJS
           </span>
           ,{" "}
           <span className="underline decoration-pink-400 dark:decoration-pink-600">
